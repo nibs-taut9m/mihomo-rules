@@ -1,0 +1,34 @@
+# mihomo / Clash Meta rule-provider: Steam 中国大陆可直连（valve-cn）
+# “-cn” 表示在中国大陆不必开代理即可访问的服务，默认策略为 DIRECT（见 config-snippet.yaml）。
+# 本文件须排在 valve.yaml 之前。
+#
+# QuixoticHeart/rule-set 没有单独的 valve-cn 文件。本组收录可在该仓库 meta/games-cn.list
+# （“游戏平台、游戏下载在中国大陆可直连”）中核实的、与 Valve / Steam / 完美世界（WMSJ）
+# 明确对应的官方或官方合作 CDN 主机。来源提交：https://github.com/QuixoticHeart/rule-set ruleset `6864f3e1116f3f0dc1be8456911017fc9f73d98a`。
+#
+# 收录：蒸汽平台 / Steam 中国（steamchina.com）、完美世界（wmsjsteam.com、*.wmsj.cn、
+# csgo.com.cn、dota2.com.cn）以及常见的官方合作下载 CDN 别名。
+#
+# 明确不收录：
+#   - 加速器 / 第三方工具（steampp.net、steam302.xyz、雷神、迅游等）；
+#   - 全球 Steam 域（steamcontent.com、steamserver.net、steamusercontent.com、
+#     cm.steampowered.com），以免把国际 Steam 流量提前打进 DIRECT；
+#   - 非 Valve 的游戏平台（Xbox、任天堂、暴雪等）；xboxlive.cn 在 microsoft-cn.yaml。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Steam 中国 / 完美世界官方域
+  - DOMAIN-SUFFIX,steamchina.com
+  - DOMAIN-SUFFIX,wmsjsteam.com
+  - DOMAIN-SUFFIX,csgo.com.cn
+  - DOMAIN-SUFFIX,csgo.wmsj.cn
+  - DOMAIN-SUFFIX,dota2.com.cn
+  - DOMAIN-SUFFIX,dota2.wmsj.cn
+  # 官方合作的中国大陆下载 / 内容 CDN 别名（来自 QH games-cn）
+  - DOMAIN-SUFFIX,dl.steam.clngaa.com
+  - DOMAIN,dl.steam.ksyna.com
+  - DOMAIN,steampipe.steamcontent.tnkjmec.com
+  - DOMAIN-SUFFIX,steampowered.com.8686c.com
+  - DOMAIN-SUFFIX,steamstatic.com.8686c.com
+  - DOMAIN-SUFFIX,st.dl.bscstorage.net
+  - DOMAIN-SUFFIX,st.dl.eccdnx.com
+  - DOMAIN-SUFFIX,st.dl.pinyuncloud.com

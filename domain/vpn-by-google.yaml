@@ -1,0 +1,6 @@
+# 本文件是 vpn-by-google 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则见 classical/vpn-by-google.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '+.g-tun.com'

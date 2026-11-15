@@ -1,0 +1,23 @@
+# 本文件是 onedrive 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/onedrive.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '+.onedrive.com'
+  - '+.1drv.ms'
+  - '+.1drv.com'
+  - '+.onedrive.live.com'
+  - 'skydrive.live.com'
+  - '+.storage.live.com'
+  - '+.livefilestore.com'
+  - '+.storage.msn.com'
+  - 'skyapi.live.net'
+  - 'snapi.live.net'
+  - '+.docs.live.net'
+  - 'g.live.com'
+  - 'oneclient.sfx.ms'
+  - 'p.sfx.ms'
+  - 'spoprod-a.akamaihd.net'
+  - '+.microsoftpersonalcontent.com'
+  - '+.photos.live.com'
+  - 'skydrive.wns.windows.com'

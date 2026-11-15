@@ -1,0 +1,27 @@
+# mihomo / Clash Meta rule-provider: STUN / WebRTC 防泄漏（建议 RULE-SET → REJECT，并放在所有 PROXY 组之前）
+# 只收录主流公共 STUN/TURN 主机，避免用过宽的 DOMAIN-KEYWORD（例如 “stun” 会误伤业务域名）。
+# Google STUN 用精确 DOMAIN，以便在 DOMAIN-SUFFIX,google.com 之前被拒绝。
+# DST-PORT 规则写在 payload 注释里，需用户显式启用；默认开启会误伤 ChatGPT Voice 等。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # 主流公共 STUN/TURN 主机
+  - DOMAIN,stun.l.google.com
+  - DOMAIN,stun1.l.google.com
+  - DOMAIN,stun2.l.google.com
+  - DOMAIN,stun3.l.google.com
+  - DOMAIN,stun4.l.google.com
+  - DOMAIN,stun.cloudflare.com
+  - DOMAIN,turn.cloudflare.com
+  - DOMAIN,stun.services.mozilla.com
+  - DOMAIN,stun.mozilla.org
+  - DOMAIN,stun.twilio.com
+  - DOMAIN,global.stun.twilio.com
+  # 可选：按目的端口拦截（默认注释）
+  # 以下 DST-PORT 默认注释掉。若取消注释并配合 REJECT，可按目的端口拦截常见 STUN/TURN，
+  # 但也会打断 ChatGPT Voice（官方使用 UDP 3478）、Discord / WhatsApp / Telegram / FaceTime 等通话。
+  # 只想拦浏览器 WebRTC 漏真实 IP 时，优先用上面的公共 STUN 主机名即可。
+  # - DST-PORT,3478
+  # - DST-PORT,3479
+  # - DST-PORT,5349
+  # - DST-PORT,19302
+  # - DST-PORT,19305

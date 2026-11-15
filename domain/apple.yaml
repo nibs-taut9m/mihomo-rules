@@ -1,0 +1,26 @@
+# 本文件是 apple 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/apple.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '+.apple.com'
+  - '+.icloud.com'
+  - '+.icloud-content.com'
+  - '+.cdn-apple.com'
+  - '+.mzstatic.com'
+  - '+.aaplimg.com'
+  - '+.apple-dns.net'
+  - '+.apple-cloudkit.com'
+  - '+.apple-livephotoskit.com'
+  - '+.apple-mapkit.com'
+  - '+.itunes.com'
+  - '+.appleschoolcontent.com'
+  - '+.axm-usercontent-apple.com'
+  - '+.apple.news'
+  - '+.me.com'
+  - '+.mac.com'
+  - '+.shazam.com'
+  - 'token.safebrowsing.apple'
+  - 'app-site-association.networking.apple'
+  - 'tv.applemusic.com'
+  - '+.appsto.re'

@@ -1,0 +1,31 @@
+# mihomo / Clash Meta rule-provider: Google 中国大陆可直连（google-cn）
+# “-cn” 表示在中国大陆不必开代理即可访问的服务，默认策略为 DIRECT（见 config-snippet.yaml）。
+# 本文件须排在 youtube.yaml 与 google.yaml 之前，以免被全球 Google / YouTube 组抢走。
+#
+# QuixoticHeart/rule-set 没有单独的 google-cn 文件。本组收录可在该仓库 meta/google.list 中
+# 核实的中国大陆官方域（.cn 以及官方 -cn 产品别名），不把 gvt1.com、recaptcha.net、
+# google.com.hk 等全球主机写入，以免强制全球流量走 DIRECT。
+# 来源提交：https://github.com/QuixoticHeart/rule-set ruleset `6864f3e1116f3f0dc1be8456911017fc9f73d98a`。
+#
+# 广告 / 分析类中国镜像（doubleclick-cn.net、googlesyndication-cn.com、
+# google-analytics-cn.com、googleads-cn.com 等）放在 ads-trackers.yaml，由 REJECT 优先拦截，
+# 不写入本组（否则会抵消广告拦截）。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Google 中国大陆官方站点、静态资源与 API
+  - DOMAIN-SUFFIX,g.cn
+  - DOMAIN-SUFFIX,google.cn
+  - DOMAIN-SUFFIX,googleapis.cn
+  - DOMAIN-SUFFIX,googleapis-cn.com
+  - DOMAIN-SUFFIX,gstatic.cn
+  - DOMAIN-SUFFIX,gstatic-cn.com
+  - DOMAIN-SUFFIX,gstaticcnapps.cn
+  - DOMAIN-SUFFIX,googleapps-cn.com
+  - DOMAIN-SUFFIX,googlecnapps.cn
+  - DOMAIN-SUFFIX,gkecnapps.cn
+  - DOMAIN-SUFFIX,ggpht.cn
+  - DOMAIN-SUFFIX,gvt1-cn.com
+  - DOMAIN-SUFFIX,gvt2-cn.com
+  - DOMAIN-SUFFIX,recaptcha-cn.net
+  - DOMAIN-SUFFIX,googleflights-cn.net
+  - DOMAIN-SUFFIX,qiao-cn.com

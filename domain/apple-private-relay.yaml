@@ -1,0 +1,8 @@
+# 本文件是 apple-private-relay 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/apple-private-relay.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - 'mask.icloud.com'
+  - 'mask-h2.icloud.com'
+  - 'mask-api.icloud.com'

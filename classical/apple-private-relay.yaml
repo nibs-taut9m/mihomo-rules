@@ -1,0 +1,13 @@
+# mihomo / Clash Meta rule-provider: iCloud Private Relay（仅入口主机）
+# 只收录 Apple 公布的 Private Relay *入口* 主机，供该服务单独分流。
+# 官方来源：https://support.apple.com/en-us/101555（mask.icloud.com、mask-h2.icloud.com、mask-api.icloud.com）；
+# 另见 https://developer.apple.com/icloud/prepare-your-network-for-icloud-private-relay/ 。
+# 切勿把 Private Relay 的 egress-ip-ranges.csv（出口地址）写入客户端分流：那是中继出口，不是你的设备要连接的入口。
+# Apple 不公布这些入口的稳定 CNAME / 专用 IP 列表；未收录未在官方文档中列出的别名。
+# 因 icloud.com 后缀位于 apple.yaml，本文件必须排在 apple.yaml 之前才能单独命中这三条主机。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # 官方 Private Relay 入口主机（精确匹配，避免覆盖整个 icloud.com）
+  - DOMAIN,mask.icloud.com
+  - DOMAIN,mask-h2.icloud.com
+  - DOMAIN,mask-api.icloud.com

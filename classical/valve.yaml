@@ -1,0 +1,70 @@
+# mihomo / Clash Meta rule-provider: Valve / Steam
+# 第一方域覆盖 Steam、Steamworks、Steam Deck、官方游戏站（Dota 2 等）与 valvesoftware.com。
+# IP 优先使用 Valve 官方公布的防火墙列表：https://as32590.net/ipv4.txt 与 ipv6.txt
+# （官方政策页 https://as32590.net/policy/ 明确提供该列表）。这是 Valve 自有网络，不是第三方 CDN。
+# 另收录 Steam 品牌的 Akamai / 指定 Azure blob 主机（客户端下载常用）；未收录各地运营商缓存与 Steam 中国第三方 CDN。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Valve / Steam 官方第一方域名
+  - DOMAIN-SUFFIX,steampowered.com
+  - DOMAIN-SUFFIX,steamcommunity.com
+  - DOMAIN-SUFFIX,steamstatic.com
+  - DOMAIN-SUFFIX,steamserver.net
+  - DOMAIN-SUFFIX,steam-chat.com
+  - DOMAIN-SUFFIX,steamusercontent.com
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steam-api.com
+  - DOMAIN-SUFFIX,steamgames.com
+  - DOMAIN-SUFFIX,steamdeck.com
+  - DOMAIN-SUFFIX,steamos.cloud
+  - DOMAIN-SUFFIX,steam.tv
+  - DOMAIN-SUFFIX,s.team
+  - DOMAIN-SUFFIX,steamconnecttest.com
+  - DOMAIN-SUFFIX,valvesoftware.com
+  - DOMAIN-SUFFIX,valve.net
+  - DOMAIN-SUFFIX,dota2.com
+  - DOMAIN-SUFFIX,playartifact.com
+  - DOMAIN-SUFFIX,underlords.com
+  # Steam 品牌 CDN 主机（非官方 IP 列表，交叉核对常用官方主机名）
+  - DOMAIN,steambroadcast.akamaized.net
+  - DOMAIN,steamcdn-a.akamaihd.net
+  - DOMAIN,steamcommunity-a.akamaihd.net
+  - DOMAIN,steammobile.akamaized.net
+  - DOMAIN,steampipe-kr.akamaized.net
+  - DOMAIN,steampipe-partner.akamaized.net
+  - DOMAIN,steampipe.akamaized.net
+  - DOMAIN,steamstore-a.akamaihd.net
+  - DOMAIN,steamusercontent-a.akamaihd.net
+  - DOMAIN,steamuserimages-a.akamaihd.net
+  - DOMAIN,steamvideo-a.akamaihd.net
+  - DOMAIN,steamcloudsweden.blob.core.windows.net
+  - DOMAIN,steamugcquincy.blob.core.windows.net
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
+  - DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net
+  - DOMAIN-SUFFIX,steambroadcast.akamaized.net
+  - DOMAIN-SUFFIX,steammobile.akamaized.net
+  - DOMAIN-SUFFIX,steampipe.akamaized.net
+  - DOMAIN-SUFFIX,steampipe-kr.akamaized.net
+  - DOMAIN-SUFFIX,steampipe-partner.akamaized.net
+  - DOMAIN-SUFFIX,steamstore-a.akamaihd.net
+  - DOMAIN-SUFFIX,steamusercontent-a.akamaihd.net
+  - DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net
+  - DOMAIN-SUFFIX,steamvideo-a.akamaihd.net
+  # Valve 官方 Steam IPv4/IPv6 列表（as32590.net）
+  - IP-CIDR,45.121.184.0/22
+  - IP-CIDR,103.10.124.0/23
+  - IP-CIDR,103.28.54.0/23
+  - IP-CIDR,146.66.152.0/21
+  - IP-CIDR,155.133.224.0/19
+  - IP-CIDR,162.254.192.0/21
+  - IP-CIDR,185.25.180.0/22
+  - IP-CIDR,192.69.96.0/22
+  - IP-CIDR,205.196.6.0/24
+  - IP-CIDR,208.64.200.0/22
+  - IP-CIDR,208.78.164.0/22
+  - IP-CIDR6,2404:3fc0::/32
+  - IP-CIDR6,2602:801:f000::/40
+  - IP-CIDR6,2620:f9::/44
+  - IP-CIDR6,2a01:bc80::/32

@@ -1,0 +1,11 @@
+# 本文件是 apns 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/apns.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '+.push.apple.com'
+  - 'identity.apple.com'
+  - 'init-p01md.apple.com'
+  - '+.init-p01md-lb.push-apple.com.akadns.net'
+  - '+.init-p01st-lb.push-apple.com.akadns.net'
+  - '+.init-s01st-lb.push-apple.com.akadns.net'

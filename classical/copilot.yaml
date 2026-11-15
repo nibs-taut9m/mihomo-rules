@@ -1,0 +1,39 @@
+# mihomo / Clash Meta rule-provider: Microsoft Copilot / GitHub Copilot
+# 只收录可明确归属 Copilot 的官方主机，不含整包 Microsoft 365 或整个 github.com。
+# Microsoft Copilot：https://learn.microsoft.com/en-us/copilot/plan/add-copilot-endpoints-allowlist
+#   以及 copilot.microsoft.com、copilot.cloud.microsoft（统一 Copilot 入口）。
+#   登录与通用下载域（login.live.com、login.microsoftonline.com、*.dl.delivery.mp.microsoft.com 等）
+#   会被许多 Microsoft 产品共用，放在本组并排在 microsoft.yaml 之前会把登录流量全部抢走，故不写入。
+# GitHub Copilot：https://docs.github.com/en/copilot/reference/copilot-allowlist-reference
+#   以及 GitHub 官方 /meta 的 domains.copilot 中仅限 Copilot 专用的主机
+#   （*.githubcopilot.com、production-copilot-host*.webpubsub.azure.com）。
+#   该文档中的 github.com、*.githubusercontent.com 是共享端点，留在 github.yaml；
+#   default.exp-tas.com 是多产品共享实验域，留在 microsoft.yaml。
+# 未写入 /meta 的 copilot IP 列表：其中包含 GitHub 主站地址块（如 140.82.112.0/20），
+# 那些地址在 github.yaml，不能干净地作为 Copilot 专用 IP。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Microsoft Copilot 专用主机
+  - DOMAIN-SUFFIX,copilot.microsoft.com
+  - DOMAIN,copilot.cloud.microsoft
+  - DOMAIN-SUFFIX,copilot.cloud.microsoft
+  # GitHub Copilot 专用主机（官方 allowlist 与 /meta domains.copilot）
+  - DOMAIN-SUFFIX,githubcopilot.com
+  - DOMAIN,copilot-proxy.githubusercontent.com
+  - DOMAIN,copilot-telemetry.githubusercontent.com
+  - DOMAIN,origin-tracker.githubusercontent.com
+  - DOMAIN,copilot-reports.github.com
+  - DOMAIN,production-copilot-host.webpubsub.azure.com
+  - DOMAIN,production-copilot-host-centralus.webpubsub.azure.com
+  - DOMAIN,production-copilot-host-centralus-02.webpubsub.azure.com
+  - DOMAIN,production-copilot-host-westus.webpubsub.azure.com
+  - DOMAIN,production-copilot-host-westus3.webpubsub.azure.com
+  - DOMAIN,production-copilot-host-eastasia.webpubsub.azure.com
+  - DOMAIN,production-copilot-host-austriaeast.webpubsub.azure.com
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN,copilot-workspace.githubnext.com
+  - DOMAIN,copilotprodattachments.blob.core.windows.net
+  - DOMAIN,copilot-telemetry-service.githubusercontent.com
+  - DOMAIN-SUFFIX,copilot-stg.com
+  - DOMAIN-SUFFIX,copilot.com

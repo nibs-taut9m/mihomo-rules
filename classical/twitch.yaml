@@ -1,0 +1,15 @@
+# mihomo / Clash Meta rule-provider: Twitch Interactive
+# 仅 Twitch 官方产品域及官方/开发者文档中出现的 CDN 域。
+# 不因亚马逊收购而扩展到整个 AWS 或 Amazon 零售（会吞掉无关云上客户）。
+# 未收录会变动的具体 CloudFront dxxxxx 主机。无官方客户端目的 CIDR。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Twitch 官方域名与 CDN 后缀
+  - DOMAIN-SUFFIX,twitch.tv
+  - DOMAIN-SUFFIX,twitchcdn.net
+  - DOMAIN-SUFFIX,twitchsvc.net
+  - DOMAIN-SUFFIX,ext-twitch.tv
+  - DOMAIN-SUFFIX,jtvnw.net
+  - DOMAIN-SUFFIX,ttvnw.net
+  - DOMAIN-SUFFIX,live-video.net
+  - DOMAIN-SUFFIX,twitchcon.com

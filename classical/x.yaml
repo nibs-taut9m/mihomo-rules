@@ -1,0 +1,66 @@
+# mihomo / Clash Meta rule-provider: X / xAI / Cursor
+# 本文件收录 X Corp（Twitter）、xAI（Grok、Grok Bot）与 Cursor。
+# Grok Bot 官方入口为 https://x.ai/bot（走 x.ai）。未收录未验证的 grokbot.com。
+# Cursor 域名与精确 S3/Azure 主机来自官方 https://cursor.com/docs/enterprise/network-configuration 。
+# ads-twitter.com 放在 ads-trackers.yaml（REJECT 优先）。
+# IP：AS13414、AS63179（RIPEstat 持有人为 Twitter Inc. / X）、AS400297（X.AI）。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # X Corp / Twitter 官方域名
+  - DOMAIN-SUFFIX,x.com
+  - DOMAIN-SUFFIX,twitter.com
+  - DOMAIN-SUFFIX,twimg.com
+  - DOMAIN-SUFFIX,t.co
+  - DOMAIN-SUFFIX,tweetdeck.com
+  - DOMAIN-SUFFIX,pscp.tv
+  - DOMAIN-SUFFIX,periscope.tv
+  - DOMAIN-SUFFIX,twttr.com
+  - DOMAIN-SUFFIX,twttr.net
+  - DOMAIN-SUFFIX,twvid.com
+  - DOMAIN-SUFFIX,twitterinc.com
+  - DOMAIN-SUFFIX,twitter.biz
+  - DOMAIN-SUFFIX,twittercommunity.com
+  - DOMAIN-SUFFIX,twitterstat.us
+  - DOMAIN-SUFFIX,twtrdns.net
+  - DOMAIN-SUFFIX,cms-twdigitalassets.com
+  - DOMAIN-SUFFIX,vine.co
+  # xAI（Grok、Grok Bot、grokipedia）
+  - DOMAIN-SUFFIX,grok.com
+  - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,grokipedia.com
+  # Cursor（官方网络配置中的域名与精确对象存储主机）
+  - DOMAIN-SUFFIX,cursor.com
+  - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN-SUFFIX,cursor-cdn.com
+  - DOMAIN-SUFFIX,cursorapi.com
+  - DOMAIN-SUFFIX,cursorvm.com
+  - DOMAIN-SUFFIX,spacex.ai
+  - DOMAIN,anysphere-binaries.s3.us-east-1.amazonaws.com
+  - DOMAIN,agent-stores.s3.us-east-1.amazonaws.com
+  - DOMAIN,agent-stores.s3.amazonaws.com
+  - DOMAIN,cursor.blob.core.windows.net
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN-SUFFIX,twimg.co
+  - DOMAIN-SUFFIX,twimg.org
+  - DOMAIN-SUFFIX,twitter.jp
+  - DOMAIN-SUFFIX,twitterflightschool.com
+  - DOMAIN-SUFFIX,twitteroauth.com
+  # AS13414 + AS63179（X/Twitter）+ AS400297（xAI）RIPEstat BGP，已聚合
+  - IP-CIDR,31.207.0.0/24
+  - IP-CIDR,64.63.0.0/18
+  - IP-CIDR,69.12.56.0/21
+  - IP-CIDR,103.252.112.0/22
+  - IP-CIDR,104.244.42.0/24
+  - IP-CIDR,104.244.44.0/22
+  - IP-CIDR,188.64.224.0/21
+  - IP-CIDR,192.48.236.0/23
+  - IP-CIDR,192.133.76.0/22
+  - IP-CIDR,199.16.156.0/22
+  - IP-CIDR,199.59.148.0/22
+  - IP-CIDR,199.96.56.0/23
+  - IP-CIDR,202.160.128.0/22
+  - IP-CIDR,209.237.208.0/24
+  - IP-CIDR6,2400:6680:f000::/36
+  - IP-CIDR6,2606:1f80:f000::/36
+  - IP-CIDR6,2a04:9d40:f000::/36

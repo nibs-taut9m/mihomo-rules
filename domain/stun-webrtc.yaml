@@ -1,0 +1,16 @@
+# 本文件是 stun-webrtc 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/stun-webrtc.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - 'stun.l.google.com'
+  - 'stun1.l.google.com'
+  - 'stun2.l.google.com'
+  - 'stun3.l.google.com'
+  - 'stun4.l.google.com'
+  - 'stun.cloudflare.com'
+  - 'turn.cloudflare.com'
+  - 'stun.services.mozilla.com'
+  - 'stun.mozilla.org'
+  - 'stun.twilio.com'
+  - 'global.stun.twilio.com'

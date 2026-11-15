@@ -1,0 +1,38 @@
+# mihomo / Clash Meta rule-provider: Telegram
+# 域名来自 Telegram 官方文档及官方运营附属域，含 comments.app（官方评论组件）。
+# IP 仅使用官方 https://core.telegram.org/resources/cidr.txt ，不收录未出现在该文件中的 ASN。
+# 未收录 TON 链（ton.org 等）。fragment.com 作为 Telegram 官方用户名拍卖站保留。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Telegram 官方域名
+  - DOMAIN-SUFFIX,telegram.org
+  - DOMAIN-SUFFIX,telegram.me
+  - DOMAIN-SUFFIX,telegram.dog
+  - DOMAIN-SUFFIX,t.me
+  - DOMAIN-SUFFIX,tx.me
+  - DOMAIN-SUFFIX,telesco.pe
+  - DOMAIN-SUFFIX,telegra.ph
+  - DOMAIN-SUFFIX,tdesktop.com
+  - DOMAIN-SUFFIX,tg.dev
+  - DOMAIN-SUFFIX,telegram-cdn.org
+  - DOMAIN-SUFFIX,cdn-telegram.org
+  - DOMAIN-SUFFIX,fragment.com
+  - DOMAIN-SUFFIX,comments.app
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN-SUFFIX,telegram.space
+  # 官方 cidr.txt（IPv4 / IPv6）
+  - IP-CIDR,91.108.56.0/22
+  - IP-CIDR,91.108.4.0/22
+  - IP-CIDR,91.108.8.0/22
+  - IP-CIDR,91.108.16.0/22
+  - IP-CIDR,91.108.12.0/22
+  - IP-CIDR,149.154.160.0/20
+  - IP-CIDR,91.105.192.0/23
+  - IP-CIDR,91.108.20.0/22
+  - IP-CIDR,185.76.151.0/24
+  - IP-CIDR6,2001:b28:f23d::/48
+  - IP-CIDR6,2001:b28:f23f::/48
+  - IP-CIDR6,2001:67c:4e8::/48
+  - IP-CIDR6,2001:b28:f23c::/48
+  - IP-CIDR6,2a0a:f280::/32

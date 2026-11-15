@@ -1,0 +1,21 @@
+# mihomo / Clash Meta rule-provider: Apple Intelligence 与 Private Cloud Compute
+# 主机来自 https://support.apple.com/en-us/101555 的 “Apple Intelligence, Siri, and Search” 一节：
+# guzzoni.apple.com（Siri / 听写）、*.smoot.apple.com（Siri、Spotlight、查询、Safari、News、信息、音乐等搜索），
+# 以及 Private Cloud Compute 中转 apple-relay.cloudflare.com、apple-relay.fastly-edge.com、cp4.cloudflare.com，
+# 还有 Apple Intelligence Extensions 使用的 apple-relay.apple.com。
+# 这些 PCC 中转不在 apple.com 后缀下，必须单独列出。
+# iCloud Private Relay 入口主机不在本组（见 apple-private-relay.yaml）。
+# 未公布可单独分离的 Apple Intelligence 专用 IP；17.0.0.0/8 等官方地址空间在 apple.yaml。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # 101555：Apple Intelligence、Siri 与搜索、Private Cloud Compute
+  - DOMAIN,guzzoni.apple.com
+  - DOMAIN-SUFFIX,smoot.apple.com
+  - DOMAIN,apple-relay.apple.com
+  - DOMAIN,apple-relay.cloudflare.com
+  - DOMAIN,apple-relay.fastly-edge.com
+  - DOMAIN,cp4.cloudflare.com
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN,appleintelligencefeedback.care.apple.com
+  - DOMAIN,apple-relay.mask.apple-dns.net

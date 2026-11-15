@@ -1,0 +1,33 @@
+# mihomo / Clash Meta rule-provider: Discord Inc.
+# 覆盖 discord.com 以及官方设计、商店、CDN 等品牌域（含仍在使用的 discordapp.com）。
+# 未收录 airhorn.solutions 等玩笑域，也未收录共享 Zendesk 主机。
+# 官方 https://cdn.discordapp.com/ipranges/discord.json 是 bot/链接预览 egress，不是客户端目的地址，不收录。
+# 客户端主要走 Cloudflare 等 CDN，无稳定官方入站 CIDR。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Discord 官方及核心产品域名
+  - DOMAIN-SUFFIX,discord.com
+  - DOMAIN-SUFFIX,discordapp.com
+  - DOMAIN-SUFFIX,discordapp.net
+  - DOMAIN-SUFFIX,discord.gg
+  - DOMAIN-SUFFIX,discord.media
+  - DOMAIN-SUFFIX,discord.gift
+  - DOMAIN-SUFFIX,discord.gifts
+  - DOMAIN-SUFFIX,discord-activities.com
+  - DOMAIN-SUFFIX,discordactivities.com
+  - DOMAIN-SUFFIX,discordsays.com
+  - DOMAIN-SUFFIX,discordstatus.com
+  - DOMAIN-SUFFIX,discord.store
+  - DOMAIN-SUFFIX,discord.new
+  - DOMAIN-SUFFIX,discord.dev
+  - DOMAIN-SUFFIX,discord.co
+  - DOMAIN-SUFFIX,dis.gd
+  - DOMAIN-SUFFIX,discord.design
+  - DOMAIN-SUFFIX,discord.tools
+  - DOMAIN-SUFFIX,discordmerch.com
+  - DOMAIN-SUFFIX,discordpartygames.com
+  - DOMAIN-SUFFIX,discordcdn.com
+  - DOMAIN,discord-attachments-uploads-prd.storage.googleapis.com
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN-SUFFIX,discordapp.page.link

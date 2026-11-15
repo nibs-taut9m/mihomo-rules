@@ -1,0 +1,19 @@
+# 本文件是 valve-cn 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/valve-cn.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '+.steamchina.com'
+  - '+.wmsjsteam.com'
+  - '+.csgo.com.cn'
+  - '+.csgo.wmsj.cn'
+  - '+.dota2.com.cn'
+  - '+.dota2.wmsj.cn'
+  - '+.dl.steam.clngaa.com'
+  - 'dl.steam.ksyna.com'
+  - 'steampipe.steamcontent.tnkjmec.com'
+  - '+.steampowered.com.8686c.com'
+  - '+.steamstatic.com.8686c.com'
+  - '+.st.dl.bscstorage.net'
+  - '+.st.dl.eccdnx.com'
+  - '+.st.dl.pinyuncloud.com'

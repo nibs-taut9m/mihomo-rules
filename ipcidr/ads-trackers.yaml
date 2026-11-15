@@ -1,0 +1,6 @@
+# 本文件是 ads-trackers 的 IP 子集，供 behavior: ipcidr、format: mrs 使用。
+# 完整规则见 classical/ads-trackers.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '203.107.1.0/24'

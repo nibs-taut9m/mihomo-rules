@@ -1,0 +1,58 @@
+# mihomo / Clash Meta rule-provider: 主流加密货币交易所与相关官方产品域（crypto）
+# 完整的加密货币分流组：包含 Binance、Gate 以及 Coinbase、Kraken、OKX、Bybit、Bitget、
+# Crypto.com、Gemini、KuCoin、HTX、MEXC、Bitfinex、Deribit、Bitstamp、BitMEX，
+# 还有官方行情站 CoinGecko、CoinMarketCap。
+# 各域均为对应产品的官方主站（或官方仍在使用的品牌域名，如 OKX 的 okex.com、HTX 的 huobi.com）。
+# binance.us 是独立运营的美国主体，不属于 binance.com，但作为主流官方交易所收录在本组。
+# 更细的公司文件见 gate.yaml、binance.yaml，其中的根域也会出现在本组。
+# 若希望 Gate / Binance 使用与其他交易所不同的策略，请把那两个文件排在本文件之前（先匹配优先）。
+# 未发现这些交易所公布的、适合客户端分流的稳定官方 IP/CIDR，故仅域名；不编造 ASN 或云上客户地址。
+# 未收录非官方镜像、仿冒站或未核实的地区镜像域。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # 主流交易所与官方行情站的产品域
+  - DOMAIN-SUFFIX,binance.com
+  - DOMAIN-SUFFIX,binance.org
+  - DOMAIN-SUFFIX,bnbstatic.com
+  - DOMAIN-SUFFIX,bnbchain.org
+  - DOMAIN-SUFFIX,binance.info
+  - DOMAIN-SUFFIX,binance.me
+  - DOMAIN-SUFFIX,binance.net
+  - DOMAIN-SUFFIX,binanceapi.com
+  - DOMAIN-SUFFIX,binance.vision
+  - DOMAIN-SUFFIX,binance.us
+  - DOMAIN-SUFFIX,gate.com
+  - DOMAIN-SUFFIX,gate.io
+  - DOMAIN-SUFFIX,gateio.ws
+  - DOMAIN-SUFFIX,gateapi.io
+  - DOMAIN-SUFFIX,coinbase.com
+  - DOMAIN-SUFFIX,kraken.com
+  - DOMAIN-SUFFIX,okx.com
+  - DOMAIN-SUFFIX,okex.com
+  - DOMAIN-SUFFIX,bybit.com
+  - DOMAIN-SUFFIX,bitget.com
+  - DOMAIN-SUFFIX,coingecko.com
+  - DOMAIN-SUFFIX,coinmarketcap.com
+  - DOMAIN-SUFFIX,crypto.com
+  - DOMAIN-SUFFIX,gemini.com
+  - DOMAIN-SUFFIX,bitstamp.net
+  - DOMAIN-SUFFIX,kucoin.com
+  - DOMAIN-SUFFIX,htx.com
+  - DOMAIN-SUFFIX,huobi.com
+  - DOMAIN-SUFFIX,mexc.com
+  - DOMAIN-SUFFIX,bitfinex.com
+  - DOMAIN-SUFFIX,deribit.com
+  - DOMAIN-SUFFIX,bitmex.com
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN-SUFFIX,bybit-global.com
+  - DOMAIN-SUFFIX,bybitglobal.com
+  - DOMAIN-SUFFIX,bytick.com
+  - DOMAIN-SUFFIX,bitgetapp.com
+  - DOMAIN-SUFFIX,bingx.com
+  - DOMAIN-SUFFIX,coinex.com
+  - DOMAIN-SUFFIX,bitmart.com
+  - DOMAIN-SUFFIX,bithumb.com
+  - DOMAIN-SUFFIX,bitflyer.com
+  - DOMAIN-SUFFIX,coincheck.com
+  - DOMAIN-SUFFIX,dydx.exchange

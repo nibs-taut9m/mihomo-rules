@@ -1,0 +1,23 @@
+# mihomo / Clash Meta rule-provider: Anthropic
+# 域名来自 Claude Code 官方 Network access requirements 与 claude.ai / Desktop 补充说明：
+# https://code.claude.com/docs/en/network-config
+# 入站 IP 来自 https://platform.claude.com/docs/en/api/ip-addresses （仅 Inbound，不含 Outbound/egress）。
+# 未收录官方文档未列出的第三方列表中的额外营销域。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Anthropic / Claude 官方域名
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN-SUFFIX,claudeusercontent.com
+  - DOMAIN-SUFFIX,claudemcpcontent.com
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN-SUFFIX,claude.app
+  - DOMAIN-SUFFIX,claude.dev
+  - DOMAIN-SUFFIX,claude.new
+  - DOMAIN-SUFFIX,anthropic.team
+  # 官方文档列出的 Claude 入站地址（客户端连接目标）
+  - IP-CIDR,160.79.104.0/23
+  - IP-CIDR,153.61.224.0/22
+  - IP-CIDR6,2607:6bc0::/48

@@ -1,0 +1,25 @@
+# 本文件是 copilot 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/copilot.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '+.copilot.microsoft.com'
+  - 'copilot.cloud.microsoft'
+  - '+.copilot.cloud.microsoft'
+  - '+.githubcopilot.com'
+  - 'copilot-proxy.githubusercontent.com'
+  - 'copilot-telemetry.githubusercontent.com'
+  - 'origin-tracker.githubusercontent.com'
+  - 'copilot-reports.github.com'
+  - 'production-copilot-host.webpubsub.azure.com'
+  - 'production-copilot-host-centralus.webpubsub.azure.com'
+  - 'production-copilot-host-centralus-02.webpubsub.azure.com'
+  - 'production-copilot-host-westus.webpubsub.azure.com'
+  - 'production-copilot-host-westus3.webpubsub.azure.com'
+  - 'production-copilot-host-eastasia.webpubsub.azure.com'
+  - 'production-copilot-host-austriaeast.webpubsub.azure.com'
+  - 'copilot-workspace.githubnext.com'
+  - 'copilotprodattachments.blob.core.windows.net'
+  - 'copilot-telemetry-service.githubusercontent.com'
+  - '+.copilot-stg.com'
+  - '+.copilot.com'

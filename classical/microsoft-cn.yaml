@@ -1,0 +1,194 @@
+# mihomo / Clash Meta rule-provider: Microsoft 中国大陆可直连（microsoft-cn）
+# “-cn” 表示在中国大陆不必开代理即可访问的服务，默认策略为 DIRECT（见 config-snippet.yaml）。
+# 本文件须排在 microsoft.yaml 之前，以便这些主机走直连而不是兜底 PROXY。
+#
+# 官方来源：https://endpoints.office.com/endpoints/China
+#   文档：https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges-21vianet
+# 保留该接口公布的中国区特有域名（partner.outlook.cn、microsoftonline.cn、sharepoint.cn、sovcloud.cn 等）
+# 以及官方中国区服务 IP。
+# 还包括可在 https://github.com/QuixoticHeart/rule-set 的 meta/microsoft-cn.list
+# （ruleset 6864f3e1116f，2026-11-14）中核验的官方域，如 21Vianet 品牌域、outlook.cn / office365.cn /
+# Microsoft 中国商店与文档、Bing 中国主机（cn.bing.com、bing.com.cn、bj1.api.bing.com）、
+# xboxlive.cn，以及 mschcdn / mcchcdn / azchcdn* 等中国 CDN 别名。
+#
+# 明确不收录（避免把全球流量提前打进 DIRECT，或误伤 Azure 中国客户应用）：
+#   - login.microsoftonline.com、officecdn.microsoft.com、*.cdn.office.net、
+#     download.microsoft.com、developer.microsoft.com、download.windowsupdate.com、
+#     dl.delivery.mp.microsoft.com、ctldl.windowsupdate.com、shell.cdn.office.net 等全球共享主机；
+#   - 过宽的 Azure 中国通配：*.windowsazure.cn、*.chinacloudapi.cn、*.azure-mobile.cn、
+#     *.chinacloud-mobile.cn、*.chinacloudapp.cn、*.chinacloudsites.cn、*.azure.cn、
+#     *.trafficmanager.cn、*.appserviceenvironment.cn。
+#   仍保留官方列表中的具体主机 microsoftgraph.chinacloudapi.cn、collector.azure.cn。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # 21Vianet / 中国区 Microsoft 365 官方域名（不含全球共享主机与过宽的 Azure 中国通配）
+  - DOMAIN-SUFFIX,aadrm.cn
+  - DOMAIN-SUFFIX,auth.microsoft.cn
+  - DOMAIN-SUFFIX,mail.protection.partner.outlook.cn
+  - DOMAIN-SUFFIX,microsoftonline.cn
+  - DOMAIN-SUFFIX,msauth.cn
+  - DOMAIN-SUFFIX,msauthimages.cn
+  - DOMAIN-SUFFIX,msftauth.cn
+  - DOMAIN-SUFFIX,msftauthimages.cn
+  - DOMAIN-SUFFIX,officewebapps.cn
+  - DOMAIN-SUFFIX,onmschina.cn
+  - DOMAIN-SUFFIX,partner.microsoftonline-m-i.net.cn
+  - DOMAIN-SUFFIX,partner.microsoftonline-m.net.cn
+  - DOMAIN-SUFFIX,partner.microsoftonline-p.cn
+  - DOMAIN-SUFFIX,partner.microsoftonline-p.net.cn
+  - DOMAIN-SUFFIX,partner.microsoftonline.cn
+  - DOMAIN-SUFFIX,partner.office365.cn
+  - DOMAIN-SUFFIX,partner.officewebapps.cn
+  - DOMAIN-SUFFIX,partner.outlook.cn
+  - DOMAIN-SUFFIX,protection.partner.outlook.cn
+  - DOMAIN-SUFFIX,sharepoint.cn
+  - DOMAIN-SUFFIX,sovcloud-mx.cn
+  - DOMAIN-SUFFIX,sovcloud-static.cn
+  - DOMAIN-SUFFIX,sovcloud-usercontent.cn
+  - DOMAIN-SUFFIX,sovcloud.cn
+  - DOMAIN-SUFFIX,teams.microsoftonline.cn
+  - DOMAIN,attachments.office365-net.cn
+  - DOMAIN,collector.azure.cn
+  - DOMAIN,loki.office365.cn
+  - DOMAIN,microsoftgraph.chinacloudapi.cn
+  - DOMAIN,portal.partner.microsoftonline.cdnsvc.com
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN,cn.windowssearch.com
+  - DOMAIN,bj1.api.bing.com
+  - DOMAIN-SUFFIX,21vbc.com
+  - DOMAIN-SUFFIX,21vbluecloud.com
+  - DOMAIN-SUFFIX,21vbluecloud.net
+  - DOMAIN-SUFFIX,bing.com.cn
+  - DOMAIN-SUFFIX,cn.bing.com
+  - DOMAIN-SUFFIX,cn.bing.net
+  - DOMAIN-SUFFIX,cn.mm.bing.net
+  - DOMAIN-SUFFIX,ditu.live.com
+  - DOMAIN-SUFFIX,dynamics.cn
+  - DOMAIN-SUFFIX,engkoo.com
+  - DOMAIN-SUFFIX,lync.cn
+  - DOMAIN-SUFFIX,microsoft-smb.cn
+  - DOMAIN-SUFFIX,microsoftazurestatus.cn
+  - DOMAIN-SUFFIX,microsoftmetrics.cn
+  - DOMAIN-SUFFIX,microsoftnews.cn
+  - DOMAIN-SUFFIX,microsoftonline-i.cn
+  - DOMAIN-SUFFIX,microsoftonline-m-i.cn
+  - DOMAIN-SUFFIX,microsoftonline-m.cn
+  - DOMAIN-SUFFIX,microsoftonline-p-i.cn
+  - DOMAIN-SUFFIX,microsoftonline-p-i.net.cn
+  - DOMAIN-SUFFIX,microsoftonline-p.cn
+  - DOMAIN-SUFFIX,microsoftonline-p.net.cn
+  - DOMAIN-SUFFIX,microsoftreactor.cn
+  - DOMAIN-SUFFIX,microsoftreactor.com.cn
+  - DOMAIN-SUFFIX,microsoftstore.com.cn
+  - DOMAIN-SUFFIX,microsofttranslator-int.cn
+  - DOMAIN-SUFFIX,msappproxy.cn
+  - DOMAIN-SUFFIX,msftcloudes.cn
+  - DOMAIN-SUFFIX,msidentity.cn
+  - DOMAIN-SUFFIX,msn.cn
+  - DOMAIN-SUFFIX,mspil.cn
+  - DOMAIN-SUFFIX,msra.cn
+  - DOMAIN-SUFFIX,o365cn.com
+  - DOMAIN-SUFFIX,o365files.cn
+  - DOMAIN-SUFFIX,office365-net.cn
+  - DOMAIN-SUFFIX,office365.cn
+  - DOMAIN-SUFFIX,officeplus.cn
+  - DOMAIN-SUFFIX,outlook.cn
+  - DOMAIN-SUFFIX,pbiwebcontent.cn
+  - DOMAIN-SUFFIX,powerapps.cn
+  - DOMAIN-SUFFIX,powerappsportals.cn
+  - DOMAIN-SUFFIX,powerautomate.cn
+  - DOMAIN-SUFFIX,powerbi.cn
+  - DOMAIN-SUFFIX,reactorms.com.cn
+  - DOMAIN-SUFFIX,trustcenter.cn
+  - DOMAIN-SUFFIX,windowsazurestatus.cn
+  - DOMAIN-SUFFIX,xboxlive.cn
+  - DOMAIN-SUFFIX,mschcdn.com
+  - DOMAIN-SUFFIX,mcchcdn.com
+  - DOMAIN-SUFFIX,azchcdna.com
+  - DOMAIN-SUFFIX,azchcdnb.com
+  - DOMAIN-SUFFIX,azchcdnc.com
+  - DOMAIN-SUFFIX,azchcdnd.com
+  - DOMAIN-SUFFIX,azchcdne.com
+  - DOMAIN-SUFFIX,azchcdnf.com
+  - DOMAIN-SUFFIX,azchcdng.com
+  - DOMAIN-SUFFIX,azchcdnh.com
+  - DOMAIN-SUFFIX,azchcdni.com
+  - DOMAIN-SUFFIX,azchcdnj.com
+  - DOMAIN-SUFFIX,azchcdnk.com
+  - DOMAIN-SUFFIX,azchcdnl.com
+  - DOMAIN-SUFFIX,azchcdnm.com
+  - DOMAIN-SUFFIX,azchcdnn.com
+  - DOMAIN-SUFFIX,azchcdno.com
+  - DOMAIN-SUFFIX,azchcdnp.com
+  - DOMAIN-SUFFIX,azchcdnq.com
+  - DOMAIN-SUFFIX,azchcdnr.com
+  - DOMAIN-SUFFIX,azchcdns.com
+  # 官方 endpoints.office.com/endpoints/China 服务 IP（已聚合，非 Azure 中国客户通配段）
+  - IP-CIDR,23.236.126.0/24
+  - IP-CIDR,40.72.70.0/23
+  - IP-CIDR,40.72.120.0/22
+  - IP-CIDR,40.72.124.128/28
+  - IP-CIDR,40.72.124.192/26
+  - IP-CIDR,40.73.129.0/24
+  - IP-CIDR,40.73.132.0/22
+  - IP-CIDR,40.73.161.0/24
+  - IP-CIDR,40.73.164.0/22
+  - IP-CIDR,40.73.240.0/24
+  - IP-CIDR,40.73.242.0/24
+  - IP-CIDR,42.159.33.192/27
+  - IP-CIDR,42.159.34.32/27
+  - IP-CIDR,42.159.34.64/27
+  - IP-CIDR,42.159.34.96/28
+  - IP-CIDR,42.159.36.0/24
+  - IP-CIDR,42.159.38.0/23
+  - IP-CIDR,42.159.44.0/22
+  - IP-CIDR,42.159.161.192/27
+  - IP-CIDR,42.159.162.32/27
+  - IP-CIDR,42.159.162.64/27
+  - IP-CIDR,42.159.162.96/28
+  - IP-CIDR,42.159.164.0/24
+  - IP-CIDR,42.159.172.0/22
+  - IP-CIDR,52.130.2.32/27
+  - IP-CIDR,52.130.3.64/27
+  - IP-CIDR,52.130.17.192/27
+  - IP-CIDR,52.130.18.32/27
+  - IP-CIDR,58.68.168.0/24
+  - IP-CIDR,101.28.252.0/24
+  - IP-CIDR,103.9.8.0/22
+  - IP-CIDR,112.25.33.0/24
+  - IP-CIDR,115.231.150.0/24
+  - IP-CIDR,123.150.49.0/24
+  - IP-CIDR,123.235.32.0/24
+  - IP-CIDR,125.65.247.0/24
+  - IP-CIDR,139.219.16.0/23
+  - IP-CIDR,139.219.24.0/22
+  - IP-CIDR,139.219.145.0/24
+  - IP-CIDR,139.219.146.0/24
+  - IP-CIDR,139.219.156.0/22
+  - IP-CIDR,159.27.160.0/21
+  - IP-CIDR,159.27.176.0/21
+  - IP-CIDR,171.107.84.0/24
+  - IP-CIDR,171.111.154.0/24
+  - IP-CIDR,175.6.10.0/24
+  - IP-CIDR,180.210.229.0/24
+  - IP-CIDR,180.210.232.0/24
+  - IP-CIDR,180.210.234.0/24
+  - IP-CIDR,182.50.87.0/24
+  - IP-CIDR,209.177.86.0/24
+  - IP-CIDR,209.177.90.0/24
+  - IP-CIDR,209.177.94.0/24
+  - IP-CIDR,211.90.28.0/24
+  - IP-CIDR,222.161.226.0/24
+  - IP-CIDR6,2406:e500:200::/64
+  - IP-CIDR6,2406:e500:201::/64
+  - IP-CIDR6,2406:e500:4010::/44
+  - IP-CIDR6,2406:e500:4030::/44
+  - IP-CIDR6,2406:e500:4040::/44
+  - IP-CIDR6,2406:e500:4110::/44
+  - IP-CIDR6,2406:e500:4210::/44
+  - IP-CIDR6,2406:e500:4310::/44
+  - IP-CIDR6,2406:e500:4400::/38
+  - IP-CIDR6,2406:e500:4900::/48
+  - IP-CIDR6,2406:e500:4a00::/39
+  - IP-CIDR6,2406:e500:5500::/48

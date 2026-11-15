@@ -1,0 +1,36 @@
+本清单记录仓库各规则组的规模快照。
+快照日期：2026-11-14（America/Los_Angeles）
+
+- stun-webrtc: classical=27 lines, domain=11, ipcidr=0, skipped=0
+- ads-trackers: classical=367 lines, domain=348, ipcidr=1, skipped=0
+- valve-cn: classical=34 lines, domain=14, ipcidr=0, skipped=0
+- valve: classical=70 lines, domain=43, ipcidr=15, skipped=0
+- apple-private-relay: classical=13 lines, domain=3, ipcidr=0, skipped=0
+- apple-intelligence: classical=21 lines, domain=8, ipcidr=0, skipped=0
+- apns: classical=30 lines, domain=6, ipcidr=9, skipped=0
+- apple-cn: classical=99 lines, domain=63, ipcidr=0, skipped=0
+- apple: classical=48 lines, domain=21, ipcidr=10, skipped=1
+- x: classical=66 lines, domain=35, ipcidr=17, skipped=0
+- telegram: classical=38 lines, domain=14, ipcidr=14, skipped=0
+- meta: classical=169 lines, domain=38, ipcidr=119, skipped=0
+- bytedance: classical=218 lines, domain=35, ipcidr=172, skipped=0
+- crypto: classical=58 lines, domain=43, ipcidr=0, skipped=0
+- github: classical=346 lines, domain=180, ipcidr=147, skipped=0
+- anthropic: classical=23 lines, domain=9, ipcidr=3, skipped=0
+- openai: classical=575 lines, domain=24, ipcidr=540, skipped=0
+- copilot: classical=39 lines, domain=20, ipcidr=0, skipped=0
+- onedrive: classical=40 lines, domain=18, ipcidr=0, skipped=1
+- microsoft-cn: classical=194 lines, domain=100, ipcidr=67, skipped=0
+- microsoft: classical=227 lines, domain=125, ipcidr=83, skipped=0
+- google-cn: classical=31 lines, domain=16, ipcidr=0, skipped=0
+- youtube: classical=193 lines, domain=176, ipcidr=0, skipped=0
+- google: classical=656 lines, domain=244, ipcidr=395, skipped=0
+- talkatone: classical=14 lines, domain=5, ipcidr=0, skipped=0
+- discord: classical=33 lines, domain=23, ipcidr=0, skipped=0
+- twitch: classical=15 lines, domain=8, ipcidr=0, skipped=0
+- gfw-common: classical=142 lines, domain=133, ipcidr=0, skipped=0
+- fakeipfilter-domain (geo backup): domain items=140 official mrs copied
+- cn-domain (geo backup): domain items=107774 official mrs copied
+- private-domain (geo backup): domain items=132 official mrs copied
+- private-ip (geo backup): ipcidr items=28 official mrs copied
+- cn-ip (geo backup): ipcidr items=9640 official mrs copied

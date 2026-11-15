@@ -1,0 +1,14 @@
+# mihomo / Clash Meta rule-provider: Talkatone（Ooma, Inc.）
+# Talkatone 为 Ooma 旗下产品。本文件以 talkatone.yaml 命名，并同时收录官方 ooma.com / ooma.ca
+# （ooma.com 页面上的官方区域站点）。
+# 未发现官方公布的客户端目的 IP/CIDR，故仅域名。不要使用第三方 “IP pool” 网站。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # Talkatone 与 Ooma 官方域名
+  - DOMAIN-SUFFIX,talkatone.com
+  - DOMAIN-SUFFIX,ooma.com
+  - DOMAIN-SUFFIX,ooma.ca
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN-SUFFIX,tktn.at
+  - DOMAIN-SUFFIX,tktn.be

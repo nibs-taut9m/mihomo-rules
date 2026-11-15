@@ -1,0 +1,40 @@
+# mihomo / Clash Meta rule-provider: OneDrive
+# 收录可明确归属 OneDrive 的官方主机（个人版与 OneDrive for Business 个人站点形态）。
+# 不把整个 Microsoft 365 / SharePoint 站点集合写入本组：sharepoint.com、sharepointonline.com 仍在 microsoft.yaml，
+# 以免把整个 SharePoint Online（团队站点、列表等）绑到 OneDrive 策略。
+# 官方来源：
+#   https://learn.microsoft.com/en-us/sharepoint/required-urls-and-ports （OneDrive 个人版）
+#   https://endpoints.office.com/endpoints/worldwide 中 SharePoint 服务区与 OneDrive 相关 URL
+#     （www.onedrive.com、admin.onedrive.com、storage.live.com、g.live.com、oneclient.sfx.ms、spoprod-a.akamaihd.net）。
+# 登录与通用 Office 主机（login.live.com、*.microsoft.com、*.office.com、officeclient.microsoft.com、*.svc.ms）
+# 为多产品共享，不写入本组。
+# OneDrive for Business 个人文档库常用 <tenant>-my.sharepoint.com 形态，使用 DOMAIN-KEYWORD 匹配该模式；
+# 普通团队站点仍走 microsoft.yaml 的 sharepoint.com。
+# SharePoint Optimize 官方 IP 无法与 OneDrive 干净分离，留在 microsoft.yaml。本组以域名为主。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # OneDrive 官方产品域与短链
+  - DOMAIN-SUFFIX,onedrive.com
+  - DOMAIN-SUFFIX,1drv.ms
+  - DOMAIN-SUFFIX,1drv.com
+  # 个人版在 live.com 下的 OneDrive / SkyDrive 主机（精确后缀，不覆盖整个 live.com）
+  - DOMAIN-SUFFIX,onedrive.live.com
+  - DOMAIN,skydrive.live.com
+  - DOMAIN-SUFFIX,storage.live.com
+  - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,storage.msn.com
+  - DOMAIN,skyapi.live.net
+  - DOMAIN,snapi.live.net
+  - DOMAIN-SUFFIX,docs.live.net
+  # 官方端点中的 OneDrive 客户端 / 静态资源主机
+  - DOMAIN,g.live.com
+  - DOMAIN,oneclient.sfx.ms
+  - DOMAIN,p.sfx.ms
+  - DOMAIN,spoprod-a.akamaihd.net
+  # OneDrive for Business 个人站点（tenant-my.sharepoint.com）
+  - DOMAIN-KEYWORD,-my.sharepoint.com
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN-SUFFIX,microsoftpersonalcontent.com
+  - DOMAIN-SUFFIX,photos.live.com
+  - DOMAIN,skydrive.wns.windows.com

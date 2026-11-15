@@ -1,0 +1,13 @@
+# 本文件是 apple-intelligence 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/apple-intelligence.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - 'guzzoni.apple.com'
+  - '+.smoot.apple.com'
+  - 'apple-relay.apple.com'
+  - 'apple-relay.cloudflare.com'
+  - 'apple-relay.fastly-edge.com'
+  - 'cp4.cloudflare.com'
+  - 'appleintelligencefeedback.care.apple.com'
+  - 'apple-relay.mask.apple-dns.net'

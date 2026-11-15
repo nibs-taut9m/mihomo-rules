@@ -1,0 +1,48 @@
+# mihomo / Clash Meta rule-provider: Apple（其余官方产品域与官方 IP 空间）
+# 公司级兜底：官方产品域，以及 101555 写明的 Apple IPv4 空间 17.0.0.0/8 与 IPv6 汇总段，
+# 另含 AS714 中落在上述官方短名单之外的聚合前缀。主来源：https://support.apple.com/en-us/101555 。
+# 下列更细的组见对应文件，本文件不重复那些主机：
+#   apple-private-relay.yaml（Private Relay 入口）、apple-intelligence.yaml（Apple Intelligence / PCC / Siri 搜索）、
+#   apns.yaml（*.push.apple.com 与 APNs 证书门户、102266 专用网段）、
+#   apple-cn.yaml（apple.com.cn、icloud.com.cn、apzones.com 等中国大陆专属域）。
+# 请把上述四组排在本文件之前，否则 DOMAIN-SUFFIX,apple.com / icloud.com 或 17.0.0.0/8 会先命中兜底策略。
+# 切勿使用 Private Relay egress-ip-ranges.csv。本文件含 17.0.0.0/8，会覆盖 APNs 等更小网段，这是有意的兜底。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # 其余官方产品与服务域（中国大陆专属后缀见 apple-cn.yaml）
+  - DOMAIN-SUFFIX,apple.com
+  - DOMAIN-SUFFIX,icloud.com
+  - DOMAIN-SUFFIX,icloud-content.com
+  - DOMAIN-SUFFIX,cdn-apple.com
+  - DOMAIN-SUFFIX,mzstatic.com
+  - DOMAIN-SUFFIX,aaplimg.com
+  - DOMAIN-SUFFIX,apple-dns.net
+  - DOMAIN-SUFFIX,apple-cloudkit.com
+  - DOMAIN-SUFFIX,apple-livephotoskit.com
+  - DOMAIN-SUFFIX,apple-mapkit.com
+  - DOMAIN-SUFFIX,itunes.com
+  - DOMAIN-SUFFIX,appleschoolcontent.com
+  - DOMAIN-SUFFIX,axm-usercontent-apple.com
+  - DOMAIN-SUFFIX,apple.news
+  - DOMAIN-SUFFIX,me.com
+  - DOMAIN-SUFFIX,mac.com
+  - DOMAIN-SUFFIX,shazam.com
+  # 不在上述后缀内的官方主机（Associated Domains 等；PCC 中转见 apple-intelligence.yaml）
+  - DOMAIN,token.safebrowsing.apple
+  - DOMAIN,app-site-association.networking.apple
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN,tv.applemusic.com
+  - DOMAIN-SUFFIX,appsto.re
+  - DOMAIN-KEYWORD,apple.com.edgekey.net
+  # 101555 官方地址空间 + AS714 中超出该短名单的聚合前缀
+  - IP-CIDR,17.0.0.0/8
+  - IP-CIDR,57.102.0.0/15
+  - IP-CIDR,65.199.22.0/23
+  - IP-CIDR,139.178.128.0/18
+  - IP-CIDR,144.178.0.0/18
+  - IP-CIDR6,2403:300::/32
+  - IP-CIDR6,2620:0:1b00::/48
+  - IP-CIDR6,2620:149::/32
+  - IP-CIDR6,2a01:b740::/32
+  - IP-CIDR6,2a01:b747::/32

@@ -1,0 +1,19 @@
+# mihomo / Clash Meta rule-provider: VPN by Google（vpn-by-google）
+# 对应配置里的「VPN by Google」组。收录该服务的隧道与控制面域名，供单独分流。
+# 须排在 google-cn.yaml、youtube.yaml、google.yaml 之前，以免被更宽的 Google 组抢走。
+#
+# 官方产品说明：https://support.google.com/pixelphone/answer/2819573
+# （Pixel 内置 VPN by Google。已于 2024-06 停用的 Google One VPN 使用同一隧道域。）
+# 官方隧道域为 g-tun.com，覆盖 oasis-prod 及 yul1.oasis-prod.g-tun.com 等区域主机。
+# 域名依据：
+# - v2fly/domain-list-community 将 g-tun.com 列为 Google 运营域；
+# - QuixoticHeart/rule-set 的 google.list 使用 +.g-tun.com；
+# - Netify 将 g-tun.com 记为 VPN by Google 的主域名。
+# 使用 DOMAIN-SUFFIX,g-tun.com 即可覆盖上述子域。
+#
+# 未收录过宽的 googleapis.com、one.google.com，以免误伤普通 Google 服务。
+# Google 未公布该 VPN 的专用客户端 CIDR，论坛上的 136.22.0.0/16 片段也不是完整官方名单，
+# 故本文件不收录 IP；按 IP 直连时会回落到 google.yaml 中的官方 Google 地址段。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  - DOMAIN-SUFFIX,g-tun.com

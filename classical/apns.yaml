@@ -1,0 +1,30 @@
+# mihomo / Clash Meta rule-provider: APNs（Apple Push Notification service）
+# 覆盖 Apple 推送通知服务的官方主机，以及 Apple 在无法放行整个 17.0.0.0/8 时公布的 APNs 专用网段。
+# 域名来自 https://support.apple.com/en-us/101555 （Device management：*.push.apple.com；
+# identity.apple.com 为 APNs 证书申请门户）。
+# 提供商侧主机 api.push.apple.com / api.sandbox.push.apple.com 已包含在 push.apple.com 后缀下。
+# 专用 IP 来自 https://support.apple.com/en-us/102266（官方写明：优先放行整个 17.0.0.0/8；
+# 若不能放行整段，再开放下列更小的 IPv4/IPv6 范围）。
+# 本文件不写入 17.0.0.0/8 本身，以免在排在 apple.yaml 之前时吞掉全部 Apple IPv4。
+# 整段 17.0.0.0/8 与 101555 公布的 IPv6 汇总段放在 apple.yaml。
+# 抓取日期：2026-11-14（America/Los_Angeles）。
+payload:
+  # APNs 官方主机
+  - DOMAIN-SUFFIX,push.apple.com
+  - DOMAIN,identity.apple.com
+
+  # 还包括可在 QuixoticHeart/rule-set（ruleset 6864f3e1116f，2026-11-14）中核验的官方域：
+  - DOMAIN,init-p01md.apple.com
+  - DOMAIN-SUFFIX,init-p01md-lb.push-apple.com.akadns.net
+  - DOMAIN-SUFFIX,init-p01st-lb.push-apple.com.akadns.net
+  - DOMAIN-SUFFIX,init-s01st-lb.push-apple.com.akadns.net
+  # 102266 公布的 APNs 专用网段（不含整个 17.0.0.0/8）
+  - IP-CIDR,17.249.0.0/16
+  - IP-CIDR,17.252.0.0/16
+  - IP-CIDR,17.57.144.0/22
+  - IP-CIDR,17.188.128.0/18
+  - IP-CIDR,17.188.20.0/23
+  - IP-CIDR6,2620:149:a44::/48
+  - IP-CIDR6,2403:300:a42::/48
+  - IP-CIDR6,2403:300:a51::/48
+  - IP-CIDR6,2a01:b740:a42::/48

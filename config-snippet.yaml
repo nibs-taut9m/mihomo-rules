@@ -1,0 +1,315 @@
+# mihomo rule-providers 片段（不含主配置里的端口、密钥或节点）。
+# 仓库按 nibs-taut9m/mihomo-rules、分支 main 填写；若仓库名或默认分支不同，请替换 URL。
+# 混合了域名和 IP 的组使用 classical YAML，因为 mrs 不支持 classical。
+# 纯域名或纯 IP 的组（含公共 geo 备份）使用 mrs。
+# 同组若使用 mrs，请同时引用 domain/组名.mrs 与 ipcidr/组名.mrs。
+# copilot 必须在 github 之前。
+
+rule-providers:
+  stun-webrtc:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/stun-webrtc.mrs
+    path: "./rule_provider/stun_webrtc"
+
+  ads-trackers:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/ads-trackers.yaml
+    path: "./rule_provider/ads_trackers"
+
+  fakeipfilter-domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/fakeipfilter-domain.mrs
+    path: "./rule_provider/fakeipfilter_domain"
+
+  private-domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/private-domain.mrs
+    path: "./rule_provider/private_domain"
+
+  private-ip:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/ipcidr/private-ip.mrs
+    path: "./rule_provider/private_ip"
+
+  cn-domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/cn-domain.mrs
+    path: "./rule_provider/cn_domain"
+
+  cn-ip:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/ipcidr/cn-ip.mrs
+    path: "./rule_provider/cn_ip"
+
+  valve-cn:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/valve-cn.mrs
+    path: "./rule_provider/valve_cn"
+
+  valve:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/valve.yaml
+    path: "./rule_provider/valve"
+
+  apple-private-relay:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/apple-private-relay.mrs
+    path: "./rule_provider/apple_private_relay"
+
+  apple-intelligence:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/apple-intelligence.mrs
+    path: "./rule_provider/apple_intelligence"
+
+  apns:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/apns.yaml
+    path: "./rule_provider/apns"
+
+  apple-cn:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/apple-cn.mrs
+    path: "./rule_provider/apple_cn"
+
+  apple:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/apple.yaml
+    path: "./rule_provider/apple"
+
+  x:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/x.yaml
+    path: "./rule_provider/x"
+
+  telegram:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/telegram.yaml
+    path: "./rule_provider/telegram"
+
+  meta:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/meta.yaml
+    path: "./rule_provider/meta"
+
+  bytedance:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/bytedance.yaml
+    path: "./rule_provider/bytedance"
+
+  crypto:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/crypto.mrs
+    path: "./rule_provider/crypto"
+
+  copilot:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/copilot.mrs
+    path: "./rule_provider/copilot"
+
+  github:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/github.yaml
+    path: "./rule_provider/github"
+
+  anthropic:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/anthropic.yaml
+    path: "./rule_provider/anthropic"
+
+  openai:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/openai.yaml
+    path: "./rule_provider/openai"
+
+  onedrive:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/onedrive.yaml
+    path: "./rule_provider/onedrive"
+
+  microsoft-cn:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/microsoft-cn.yaml
+    path: "./rule_provider/microsoft_cn"
+
+  microsoft:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/microsoft.yaml
+    path: "./rule_provider/microsoft"
+
+  vpn-by-google:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/vpn-by-google.mrs
+    path: "./rule_provider/vpn_by_google"
+
+  google-cn:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/google-cn.mrs
+    path: "./rule_provider/google_cn"
+
+  youtube:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/youtube.mrs
+    path: "./rule_provider/youtube"
+
+  google:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/classical/google.yaml
+    path: "./rule_provider/google"
+
+  talkatone:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/talkatone.mrs
+    path: "./rule_provider/talkatone"
+
+  discord:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/discord.mrs
+    path: "./rule_provider/discord"
+
+  twitch:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/twitch.mrs
+    path: "./rule_provider/twitch"
+
+  gfw-common:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/nibs-taut9m/mihomo-rules/main/domain/gfw-common.mrs
+    path: "./rule_provider/gfw_common"
+
+rules:
+  - RULE-SET,stun-webrtc,REJECT
+  - RULE-SET,ads-trackers,REJECT
+  - RULE-SET,private-domain,DIRECT
+  - RULE-SET,private-ip,DIRECT,no-resolve
+  - RULE-SET,cn-domain,cn-domain
+  - RULE-SET,cn-ip,cn-ip,no-resolve
+  - RULE-SET,valve-cn,valve-cn,no-resolve
+  - RULE-SET,valve,valve,no-resolve
+  - RULE-SET,apple-private-relay,🍎 apple-private-relay
+  - RULE-SET,apple-intelligence,🍎 apple-intelligence
+  - RULE-SET,apns,🍎 apns
+  - RULE-SET,apple-cn,🍎 apple-cn
+  - RULE-SET,apple,🍎 apple
+  - RULE-SET,x,x,no-resolve
+  - RULE-SET,telegram,📲 Telegram,no-resolve
+  - RULE-SET,meta,meta,no-resolve
+  - RULE-SET,bytedance,🎵 bytedance,no-resolve
+  - RULE-SET,crypto,🪙 crypto,no-resolve
+  - RULE-SET,copilot,copilot,no-resolve
+  - RULE-SET,github,👨‍💻 github,no-resolve
+  - RULE-SET,anthropic,anthropic,no-resolve
+  - RULE-SET,openai,openai,no-resolve
+  - RULE-SET,onedrive,🐬 onedrive,no-resolve
+  - RULE-SET,microsoft-cn,microsoft-cn,no-resolve
+  - RULE-SET,microsoft,microsoft,no-resolve
+  - RULE-SET,vpn-by-google,🍀 VPN by Google,no-resolve
+  - RULE-SET,google-cn,🍀 google-cn,no-resolve
+  - RULE-SET,youtube,📹 youtube,no-resolve
+  - RULE-SET,google,🍀 Google,no-resolve
+  - RULE-SET,talkatone,talkatone,no-resolve
+  - RULE-SET,discord,discord,no-resolve
+  - RULE-SET,twitch,twitch,no-resolve
+  - RULE-SET,gfw-common,gfw-common,no-resolve
+  - MATCH,🐟 漏网之鱼

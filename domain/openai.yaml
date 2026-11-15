@@ -1,0 +1,29 @@
+# 本文件是 openai 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/openai.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '+.openai.com'
+  - '+.chatgpt.com'
+  - '+.oaistatic.com'
+  - '+.oaiusercontent.com'
+  - '+.oaistatsig.com'
+  - '+.openaimerge.com'
+  - 'challenges.cloudflare.com'
+  - '+.intercom.io'
+  - '+.intercomcdn.com'
+  - '+.ct.sendgrid.net'
+  - 'cdn.workos.com'
+  - 'forwarder.workos.com'
+  - 'frontend-apps-multi-region.workos.com'
+  - 'setup.workos.com'
+  - 'images.workoscdn.com'
+  - 'workos.imgix.net'
+  - 'js.stripe.com'
+  - 'o207216.ingest.sentry.io'
+  - 'o33249.ingest.sentry.io'
+  - 'rum.browser-intake-datadoghq.com'
+  - 'humb.apple.com'
+  - '+.chat.com'
+  - '+.openai.org'
+  - '+.sora.com'

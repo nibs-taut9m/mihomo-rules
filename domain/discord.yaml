@@ -1,0 +1,28 @@
+# 本文件是 discord 的域名子集，供 behavior: domain、format: mrs 使用。
+# 完整规则（含 IP 与无法写入 mrs 的条目）见 classical/discord.yaml，behavior: classical，format: yaml。
+# 快照日期：2026-11-14（America/Los_Angeles）
+
+payload:
+  - '+.discord.com'
+  - '+.discordapp.com'
+  - '+.discordapp.net'
+  - '+.discord.gg'
+  - '+.discord.media'
+  - '+.discord.gift'
+  - '+.discord.gifts'
+  - '+.discord-activities.com'
+  - '+.discordactivities.com'
+  - '+.discordsays.com'
+  - '+.discordstatus.com'
+  - '+.discord.store'
+  - '+.discord.new'
+  - '+.discord.dev'
+  - '+.discord.co'
+  - '+.dis.gd'
+  - '+.discord.design'
+  - '+.discord.tools'
+  - '+.discordmerch.com'
+  - '+.discordpartygames.com'
+  - '+.discordcdn.com'
+  - 'discord-attachments-uploads-prd.storage.googleapis.com'
+  - '+.discordapp.page.link'
