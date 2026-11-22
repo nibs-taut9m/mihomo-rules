@@ -1,0 +1,9 @@
+# Shadowrocket 规则列表：vpn-by-google
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/vpn-by-google.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN-SUFFIX: 1
+# TOTAL: 1
+DOMAIN-SUFFIX,g-tun.com
