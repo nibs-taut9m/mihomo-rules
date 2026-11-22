@@ -1,0 +1,11 @@
+# Shadowrocket 规则列表：apple-private-relay
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/apple-private-relay.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN: 3
+# TOTAL: 3
+DOMAIN,mask.icloud.com
+DOMAIN,mask-h2.icloud.com
+DOMAIN,mask-api.icloud.com

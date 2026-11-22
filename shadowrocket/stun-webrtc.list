@@ -1,0 +1,19 @@
+# Shadowrocket 规则列表：stun-webrtc
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/stun-webrtc.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN: 11
+# TOTAL: 11
+DOMAIN,stun.l.google.com
+DOMAIN,stun1.l.google.com
+DOMAIN,stun2.l.google.com
+DOMAIN,stun3.l.google.com
+DOMAIN,stun4.l.google.com
+DOMAIN,stun.cloudflare.com
+DOMAIN,turn.cloudflare.com
+DOMAIN,stun.services.mozilla.com
+DOMAIN,stun.mozilla.org
+DOMAIN,stun.twilio.com
+DOMAIN,global.stun.twilio.com

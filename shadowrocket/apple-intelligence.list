@@ -1,0 +1,17 @@
+# Shadowrocket 规则列表：apple-intelligence
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/apple-intelligence.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN: 7
+# DOMAIN-SUFFIX: 1
+# TOTAL: 8
+DOMAIN,guzzoni.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN,apple-relay.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,cp4.cloudflare.com
+DOMAIN,appleintelligencefeedback.care.apple.com
+DOMAIN,apple-relay.mask.apple-dns.net

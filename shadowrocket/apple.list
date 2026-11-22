@@ -1,0 +1,44 @@
+# Shadowrocket 规则列表：apple
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/apple.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN: 3
+# DOMAIN-SUFFIX: 18
+# DOMAIN-KEYWORD: 1
+# IP-CIDR (IPv4): 5
+# IP-CIDR (IPv6): 5
+# TOTAL: 32
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-livephotoskit.com
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,appleschoolcontent.com
+DOMAIN-SUFFIX,axm-usercontent-apple.com
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,mac.com
+DOMAIN-SUFFIX,shazam.com
+DOMAIN,token.safebrowsing.apple
+DOMAIN,app-site-association.networking.apple
+DOMAIN,tv.applemusic.com
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-KEYWORD,apple.com.edgekey.net
+IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR,57.102.0.0/15,no-resolve
+IP-CIDR,65.199.22.0/23,no-resolve
+IP-CIDR,139.178.128.0/18,no-resolve
+IP-CIDR,144.178.0.0/18,no-resolve
+IP-CIDR,2403:300::/32,no-resolve
+IP-CIDR,2620:0:1b00::/48,no-resolve
+IP-CIDR,2620:149::/32,no-resolve
+IP-CIDR,2a01:b740::/32,no-resolve
+IP-CIDR,2a01:b747::/32,no-resolve

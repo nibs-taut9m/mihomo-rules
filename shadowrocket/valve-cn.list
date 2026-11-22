@@ -1,0 +1,23 @@
+# Shadowrocket 规则列表：valve-cn
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/valve-cn.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN: 2
+# DOMAIN-SUFFIX: 12
+# TOTAL: 14
+DOMAIN-SUFFIX,steamchina.com
+DOMAIN-SUFFIX,wmsjsteam.com
+DOMAIN-SUFFIX,csgo.com.cn
+DOMAIN-SUFFIX,csgo.wmsj.cn
+DOMAIN-SUFFIX,dota2.com.cn
+DOMAIN-SUFFIX,dota2.wmsj.cn
+DOMAIN-SUFFIX,dl.steam.clngaa.com
+DOMAIN,dl.steam.ksyna.com
+DOMAIN,steampipe.steamcontent.tnkjmec.com
+DOMAIN-SUFFIX,steampowered.com.8686c.com
+DOMAIN-SUFFIX,steamstatic.com.8686c.com
+DOMAIN-SUFFIX,st.dl.bscstorage.net
+DOMAIN-SUFFIX,st.dl.eccdnx.com
+DOMAIN-SUFFIX,st.dl.pinyuncloud.com

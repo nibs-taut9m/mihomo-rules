@@ -1,0 +1,24 @@
+# Shadowrocket 规则列表：google-cn
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/google-cn.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN-SUFFIX: 16
+# TOTAL: 16
+DOMAIN-SUFFIX,g.cn
+DOMAIN-SUFFIX,google.cn
+DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,googleapis-cn.com
+DOMAIN-SUFFIX,gstatic.cn
+DOMAIN-SUFFIX,gstatic-cn.com
+DOMAIN-SUFFIX,gstaticcnapps.cn
+DOMAIN-SUFFIX,googleapps-cn.com
+DOMAIN-SUFFIX,googlecnapps.cn
+DOMAIN-SUFFIX,gkecnapps.cn
+DOMAIN-SUFFIX,ggpht.cn
+DOMAIN-SUFFIX,gvt1-cn.com
+DOMAIN-SUFFIX,gvt2-cn.com
+DOMAIN-SUFFIX,recaptcha-cn.net
+DOMAIN-SUFFIX,googleflights-cn.net
+DOMAIN-SUFFIX,qiao-cn.com

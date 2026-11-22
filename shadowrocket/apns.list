@@ -1,0 +1,26 @@
+# Shadowrocket 规则列表：apns
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/apns.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN: 2
+# DOMAIN-SUFFIX: 4
+# IP-CIDR (IPv4): 5
+# IP-CIDR (IPv6): 4
+# TOTAL: 15
+DOMAIN-SUFFIX,push.apple.com
+DOMAIN,identity.apple.com
+DOMAIN,init-p01md.apple.com
+DOMAIN-SUFFIX,init-p01md-lb.push-apple.com.akadns.net
+DOMAIN-SUFFIX,init-p01st-lb.push-apple.com.akadns.net
+DOMAIN-SUFFIX,init-s01st-lb.push-apple.com.akadns.net
+IP-CIDR,17.249.0.0/16,no-resolve
+IP-CIDR,17.252.0.0/16,no-resolve
+IP-CIDR,17.57.144.0/22,no-resolve
+IP-CIDR,17.188.128.0/18,no-resolve
+IP-CIDR,17.188.20.0/23,no-resolve
+IP-CIDR,2620:149:a44::/48,no-resolve
+IP-CIDR,2403:300:a42::/48,no-resolve
+IP-CIDR,2403:300:a51::/48,no-resolve
+IP-CIDR,2a01:b740:a42::/48,no-resolve

@@ -1,0 +1,51 @@
+# Shadowrocket 规则列表：crypto
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/crypto.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN-SUFFIX: 43
+# TOTAL: 43
+DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,binance.org
+DOMAIN-SUFFIX,bnbstatic.com
+DOMAIN-SUFFIX,bnbchain.org
+DOMAIN-SUFFIX,binance.info
+DOMAIN-SUFFIX,binance.me
+DOMAIN-SUFFIX,binance.net
+DOMAIN-SUFFIX,binanceapi.com
+DOMAIN-SUFFIX,binance.vision
+DOMAIN-SUFFIX,binance.us
+DOMAIN-SUFFIX,gate.com
+DOMAIN-SUFFIX,gate.io
+DOMAIN-SUFFIX,gateio.ws
+DOMAIN-SUFFIX,gateapi.io
+DOMAIN-SUFFIX,coinbase.com
+DOMAIN-SUFFIX,kraken.com
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bitget.com
+DOMAIN-SUFFIX,coingecko.com
+DOMAIN-SUFFIX,coinmarketcap.com
+DOMAIN-SUFFIX,crypto.com
+DOMAIN-SUFFIX,gemini.com
+DOMAIN-SUFFIX,bitstamp.net
+DOMAIN-SUFFIX,kucoin.com
+DOMAIN-SUFFIX,htx.com
+DOMAIN-SUFFIX,huobi.com
+DOMAIN-SUFFIX,mexc.com
+DOMAIN-SUFFIX,bitfinex.com
+DOMAIN-SUFFIX,deribit.com
+DOMAIN-SUFFIX,bitmex.com
+DOMAIN-SUFFIX,bybit-global.com
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bytick.com
+DOMAIN-SUFFIX,bitgetapp.com
+DOMAIN-SUFFIX,bingx.com
+DOMAIN-SUFFIX,coinex.com
+DOMAIN-SUFFIX,bitmart.com
+DOMAIN-SUFFIX,bithumb.com
+DOMAIN-SUFFIX,bitflyer.com
+DOMAIN-SUFFIX,coincheck.com
+DOMAIN-SUFFIX,dydx.exchange

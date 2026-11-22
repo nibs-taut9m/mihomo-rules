@@ -1,0 +1,63 @@
+# Shadowrocket 规则列表：x
+# 由 mihomo 规则转换，不是新的来源。
+# 来源：classical/x.yaml
+# 快照日期：2026-11-14（America/Los_Angeles）
+# 仓库：https://github.com/nibs-taut9m/mihomo-rules
+# 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
+# DOMAIN: 4
+# DOMAIN-SUFFIX: 31
+# IP-CIDR (IPv4): 14
+# IP-CIDR (IPv6): 3
+# TOTAL: 52
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,t.co
+DOMAIN-SUFFIX,tweetdeck.com
+DOMAIN-SUFFIX,pscp.tv
+DOMAIN-SUFFIX,periscope.tv
+DOMAIN-SUFFIX,twttr.com
+DOMAIN-SUFFIX,twttr.net
+DOMAIN-SUFFIX,twvid.com
+DOMAIN-SUFFIX,twitterinc.com
+DOMAIN-SUFFIX,twitter.biz
+DOMAIN-SUFFIX,twittercommunity.com
+DOMAIN-SUFFIX,twitterstat.us
+DOMAIN-SUFFIX,twtrdns.net
+DOMAIN-SUFFIX,cms-twdigitalassets.com
+DOMAIN-SUFFIX,vine.co
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grokipedia.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursor-cdn.com
+DOMAIN-SUFFIX,cursorapi.com
+DOMAIN-SUFFIX,cursorvm.com
+DOMAIN-SUFFIX,spacex.ai
+DOMAIN,anysphere-binaries.s3.us-east-1.amazonaws.com
+DOMAIN,agent-stores.s3.us-east-1.amazonaws.com
+DOMAIN,agent-stores.s3.amazonaws.com
+DOMAIN,cursor.blob.core.windows.net
+DOMAIN-SUFFIX,twimg.co
+DOMAIN-SUFFIX,twimg.org
+DOMAIN-SUFFIX,twitter.jp
+DOMAIN-SUFFIX,twitterflightschool.com
+DOMAIN-SUFFIX,twitteroauth.com
+IP-CIDR,31.207.0.0/24,no-resolve
+IP-CIDR,64.63.0.0/18,no-resolve
+IP-CIDR,69.12.56.0/21,no-resolve
+IP-CIDR,103.252.112.0/22,no-resolve
+IP-CIDR,104.244.42.0/24,no-resolve
+IP-CIDR,104.244.44.0/22,no-resolve
+IP-CIDR,188.64.224.0/21,no-resolve
+IP-CIDR,192.48.236.0/23,no-resolve
+IP-CIDR,192.133.76.0/22,no-resolve
+IP-CIDR,199.16.156.0/22,no-resolve
+IP-CIDR,199.59.148.0/22,no-resolve
+IP-CIDR,199.96.56.0/23,no-resolve
+IP-CIDR,202.160.128.0/22,no-resolve
+IP-CIDR,209.237.208.0/24,no-resolve
+IP-CIDR,2400:6680:f000::/36,no-resolve
+IP-CIDR,2606:1f80:f000::/36,no-resolve
+IP-CIDR,2a04:9d40:f000::/36,no-resolve
