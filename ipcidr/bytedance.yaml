@@ -1,6 +1,6 @@
 # 本文件是 bytedance 的 IP 子集，供 behavior: ipcidr、format: mrs 使用。
 # 完整规则见 classical/bytedance.yaml，behavior: classical，format: yaml。
-# 快照日期：2026-11-14（America/Los_Angeles）
+# 快照日期：2026-11-23（America/Los_Angeles）
 
 payload:
   - '71.18.1.0/24'
@@ -175,3 +175,4 @@ payload:
   - '2605:340:f0d2::/48'
   - '2605:340:f0d9::/48'
   - '2605:340:f0da::/48'
+  - '2a00:4520:9::/48'

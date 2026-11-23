@@ -1,13 +1,13 @@
 # Shadowrocket 规则列表：bytedance
 # 由 mihomo 规则转换，不是新的来源。
 # 来源：classical/bytedance.yaml
-# 快照日期：2026-11-14（America/Los_Angeles）
+# 快照日期：2026-11-23（America/Los_Angeles）
 # 仓库：https://github.com/nibs-taut9m/mihomo-rules
 # 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
 # DOMAIN-SUFFIX: 35
 # IP-CIDR (IPv4): 102
-# IP-CIDR (IPv6): 70
-# TOTAL: 207
+# IP-CIDR (IPv6): 71
+# TOTAL: 208
 DOMAIN-SUFFIX,tiktok.com
 DOMAIN-SUFFIX,tiktokcdn.com
 DOMAIN-SUFFIX,tiktokcdn-us.com
@@ -215,3 +215,4 @@ IP-CIDR,2605:340:f0cd::/48,no-resolve
 IP-CIDR,2605:340:f0d2::/48,no-resolve
 IP-CIDR,2605:340:f0d9::/48,no-resolve
 IP-CIDR,2605:340:f0da::/48,no-resolve
+IP-CIDR,2a00:4520:9::/48,no-resolve

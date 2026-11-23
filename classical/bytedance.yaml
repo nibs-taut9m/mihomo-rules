@@ -4,7 +4,7 @@
 # 未整包收录抖音/今日头条/西瓜等国内消费应用及火山引擎客户云，以免把大量国内直连流量打进代理。
 # CapCut、Lark 国际版（larksuite.com）作为明确的海外产品域收录；飞书国内域未收录。
 # analytics.tiktok.com / ads.tiktok.com 的拦截见 ads-trackers.yaml（精确主机，REJECT 优先）。
-# 抓取日期：2026-11-14（America/Los_Angeles）。
+# 抓取日期：2026-11-23（America/Los_Angeles）。
 payload:
   # TikTok 官方及品牌域名
   - DOMAIN-SUFFIX,tiktok.com
@@ -216,3 +216,4 @@ payload:
   - IP-CIDR6,2605:340:f0d2::/48
   - IP-CIDR6,2605:340:f0d9::/48
   - IP-CIDR6,2605:340:f0da::/48
+  - IP-CIDR6,2a00:4520:9::/48

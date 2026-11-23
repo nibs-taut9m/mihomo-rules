@@ -1,14 +1,14 @@
 # Shadowrocket 规则列表：github
 # 由 mihomo 规则转换，不是新的来源。
 # 来源：classical/github.yaml
-# 快照日期：2026-11-14（America/Los_Angeles）
+# 快照日期：2026-11-23（America/Los_Angeles）
 # 仓库：https://github.com/nibs-taut9m/mihomo-rules
 # 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
 # DOMAIN: 150
 # DOMAIN-SUFFIX: 30
-# IP-CIDR (IPv4): 145
+# IP-CIDR (IPv4): 149
 # IP-CIDR (IPv6): 2
-# TOTAL: 327
+# TOTAL: 331
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,githubusercontent.com
@@ -248,6 +248,7 @@ IP-CIDR,20.29.134.18/31,no-resolve
 IP-CIDR,20.29.134.22/31,no-resolve
 IP-CIDR,20.29.134.26/32,no-resolve
 IP-CIDR,20.51.87.64/28,no-resolve
+IP-CIDR,20.64.190.224/28,no-resolve
 IP-CIDR,20.85.130.105/32,no-resolve
 IP-CIDR,20.87.245.0/31,no-resolve
 IP-CIDR,20.87.245.2/32,no-resolve
@@ -291,6 +292,7 @@ IP-CIDR,20.250.119.64/32,no-resolve
 IP-CIDR,20.250.119.67/32,no-resolve
 IP-CIDR,20.250.119.68/32,no-resolve
 IP-CIDR,20.250.119.72/31,no-resolve
+IP-CIDR,20.254.76.112/28,no-resolve
 IP-CIDR,40.121.125.32/28,no-resolve
 IP-CIDR,40.121.125.128/26,no-resolve
 IP-CIDR,40.121.125.192/27,no-resolve
@@ -313,6 +315,7 @@ IP-CIDR,52.140.63.241/32,no-resolve
 IP-CIDR,52.175.140.176/32,no-resolve
 IP-CIDR,57.155.223.240/28,no-resolve
 IP-CIDR,57.166.80.144/28,no-resolve
+IP-CIDR,74.158.248.0/28,no-resolve
 IP-CIDR,74.161.79.192/28,no-resolve
 IP-CIDR,135.234.59.224/28,no-resolve
 IP-CIDR,135.235.149.144/28,no-resolve
@@ -321,6 +324,7 @@ IP-CIDR,140.82.112.0/20,no-resolve
 IP-CIDR,143.55.64.0/20,no-resolve
 IP-CIDR,172.130.18.192/28,no-resolve
 IP-CIDR,172.130.45.112/28,no-resolve
+IP-CIDR,172.130.99.48/28,no-resolve
 IP-CIDR,172.130.153.16/28,no-resolve
 IP-CIDR,172.130.201.80/28,no-resolve
 IP-CIDR,172.139.64.112/28,no-resolve
