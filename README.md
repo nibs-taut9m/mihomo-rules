@@ -3,7 +3,7 @@
 
 这份规则集按软路由 mihomo 配置里用到的 rule-providers 整理，发布在 [nibs-taut9m/mihomo-rules](https://github.com/nibs-taut9m/mihomo-rules)。
 
-快照日期：2026-11-14（America/Los_Angeles）
+快照日期：2026-11-23（America/Los_Angeles）
 
 ## 目录
 
@@ -65,7 +65,7 @@ rule-providers:
 
 ## Shadowrocket
 
-`shadowrocket/` 提供与 mihomo 规则组同名的 `.list` 文件，由本仓库 2026-11-14（America/Los_Angeles）快照转换而来，不是新的来源。列表只含匹配条件，不含 `PROXY` / `DIRECT` / `REJECT`；策略请在自己的 Shadowrocket 配置里指定。
+`shadowrocket/` 提供与 mihomo 规则组同名的 `.list` 文件，由本仓库 2026-11-23（America/Los_Angeles） 快照转换而来，不是新的来源。列表只含匹配条件，不含 `PROXY` / `DIRECT` / `REJECT`；策略请在自己的 Shadowrocket 配置里指定。
 
 引用地址（把组名换成实际文件名；分支为 `main`）：
 

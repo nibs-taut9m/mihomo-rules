@@ -1,13 +1,13 @@
 # Shadowrocket 规则列表：meta
 # 由 mihomo 规则转换，不是新的来源。
 # 来源：classical/meta.yaml
-# 快照日期：2026-11-14（America/Los_Angeles）
+# 快照日期：2026-11-23（America/Los_Angeles）
 # 仓库：https://github.com/nibs-taut9m/mihomo-rules
 # 本列表不含策略（PROXY/DIRECT/REJECT），请在 Shadowrocket 配置的 RULE-SET 中自行指定。
 # DOMAIN-SUFFIX: 38
-# IP-CIDR (IPv4): 78
+# IP-CIDR (IPv4): 79
 # IP-CIDR (IPv6): 41
-# TOTAL: 157
+# TOTAL: 158
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,ig.me
@@ -108,6 +108,7 @@ IP-CIDR,157.240.144.0/24,no-resolve
 IP-CIDR,157.240.156.0/23,no-resolve
 IP-CIDR,157.240.158.0/24,no-resolve
 IP-CIDR,157.240.169.0/24,no-resolve
+IP-CIDR,157.240.170.0/24,no-resolve
 IP-CIDR,157.240.175.0/24,no-resolve
 IP-CIDR,157.240.177.0/24,no-resolve
 IP-CIDR,157.240.179.0/24,no-resolve

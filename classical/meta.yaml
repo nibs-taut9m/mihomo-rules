@@ -4,7 +4,7 @@
 # 未收录 typo/防御性注册域，也未收录 Giphy（出售状态不确定）或 Ray-Ban（Luxottica）。
 # IP：AS32934（产品）+ AS63293（内容）RIPEstat BGP，已聚合。查询见 SOURCES.md。
 # facebook.net 保留在本组（应用依赖），广告拦截见 ads-trackers.yaml 说明。
-# 抓取日期：2026-11-14（America/Los_Angeles）。
+# 抓取日期：2026-11-23（America/Los_Angeles）。
 payload:
   # Meta 官方及核心产品域名
   - DOMAIN-SUFFIX,instagram.com
@@ -110,6 +110,7 @@ payload:
   - IP-CIDR,157.240.156.0/23
   - IP-CIDR,157.240.158.0/24
   - IP-CIDR,157.240.169.0/24
+  - IP-CIDR,157.240.170.0/24
   - IP-CIDR,157.240.175.0/24
   - IP-CIDR,157.240.177.0/24
   - IP-CIDR,157.240.179.0/24

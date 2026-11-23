@@ -10,7 +10,7 @@
 # 不收录 GitLab / Gitee / GitBook，也不使用过宽的 DOMAIN-KEYWORD,github。
 # Azure Blob 只写官方 /meta 公布的具体存储账户，不用 *.blob.core.windows.net 通配。
 # 还包括可在 QuixoticHeart/rule-set 的 meta/gits.list 中核验的官方产品域。
-# 抓取日期：2026-11-14（America/Los_Angeles）。
+# 抓取日期：2026-11-23（America/Los_Angeles）。
 payload:
   # GitHub 官方产品域（/meta domains.website 及官方附属域）
   - DOMAIN-SUFFIX,github.com
@@ -256,6 +256,7 @@ payload:
   - IP-CIDR,20.29.134.22/31
   - IP-CIDR,20.29.134.26/32
   - IP-CIDR,20.51.87.64/28
+  - IP-CIDR,20.64.190.224/28
   - IP-CIDR,20.85.130.105/32
   - IP-CIDR,20.87.245.0/31
   - IP-CIDR,20.87.245.2/32
@@ -299,6 +300,7 @@ payload:
   - IP-CIDR,20.250.119.67/32
   - IP-CIDR,20.250.119.68/32
   - IP-CIDR,20.250.119.72/31
+  - IP-CIDR,20.254.76.112/28
   - IP-CIDR,40.121.125.32/28
   - IP-CIDR,40.121.125.128/26
   - IP-CIDR,40.121.125.192/27
@@ -321,6 +323,7 @@ payload:
   - IP-CIDR,52.175.140.176/32
   - IP-CIDR,57.155.223.240/28
   - IP-CIDR,57.166.80.144/28
+  - IP-CIDR,74.158.248.0/28
   - IP-CIDR,74.161.79.192/28
   - IP-CIDR,135.234.59.224/28
   - IP-CIDR,135.235.149.144/28
@@ -329,6 +332,7 @@ payload:
   - IP-CIDR,143.55.64.0/20
   - IP-CIDR,172.130.18.192/28
   - IP-CIDR,172.130.45.112/28
+  - IP-CIDR,172.130.99.48/28
   - IP-CIDR,172.130.153.16/28
   - IP-CIDR,172.130.201.80/28
   - IP-CIDR,172.139.64.112/28

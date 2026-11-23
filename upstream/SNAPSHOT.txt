@@ -1,14 +1,14 @@
 # 公共 geo 备份清单
-# 快照日期：2026-11-14（America/Los_Angeles）
+# 快照日期：2026-11-23（America/Los_Angeles）
 
 - fakeipfilter-domain list: https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/meta/domain/fake-ip-filter.list  sha256=d7e37283f21707b960063ea4ca9058af46a9714fa2f5046afec332dad77f9301  bytes=2069  saved=upstream/QuixoticHeart/domain/fake-ip-filter.list
 - fakeipfilter-domain mrs: https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/meta/domain/fake-ip-filter.mrs  sha256=93f6818adf9f4ff62c5b8b3b0a51f6534841394d1b6eafba32bc2c5222200fa2  bytes=1274  saved=upstream/QuixoticHeart/domain/fake-ip-filter.mrs
-- cn-domain list: https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/meta/domain/cn.list  sha256=310c74ccbc8c91c805b0f2f57354aa167fb735ed8f7f3e33b5cac6c96e2f7a73  bytes=1578753  saved=upstream/QuixoticHeart/domain/cn.list
-- cn-domain mrs: https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/meta/domain/cn.mrs  sha256=afca51b505eb3e3176fdfba618753429aee8d0bd29aae83cd85fda240a7ac8aa  bytes=517634  saved=upstream/QuixoticHeart/domain/cn.mrs
+- cn-domain list: https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/meta/domain/cn.list  sha256=6708b429b3cbe535f3c777d448a60e43c6a97a851e7c7d4085be8d1ca4a660df  bytes=1578903  saved=upstream/QuixoticHeart/domain/cn.list
+- cn-domain mrs: https://raw.githubusercontent.com/QuixoticHeart/rule-set/ruleset/meta/domain/cn.mrs  sha256=aa19f6b9ce605d79182731037d6a53817e824a147ddf946813be04895b84761b  bytes=517773  saved=upstream/QuixoticHeart/domain/cn.mrs
 - private-domain list: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.list  sha256=db9b2da8d7e90f09e183dcde096f72adaacd8de21e0f09d364b413085ecb7b57  bytes=2741  saved=upstream/MetaCubeX/geosite/private.list
 - private-domain yaml: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml  sha256=7f396a73bf5c01725cf4a51e6089239491a0d8cb3c808bd1c524d78391221440  bytes=3543  saved=upstream/MetaCubeX/geosite/private.yaml
 - private-domain mrs: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs  sha256=df452ab1bfb572f366f00001fa4525f16f137dc670aed2c60af0100dc397d3ec  bytes=781  saved=upstream/MetaCubeX/geosite/private.mrs
 - private-ip list: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.list  sha256=3105f74241f0c3fc4e0d3a67ffc33a018a3eb7913725a7219576603b79935c3c  bytes=354  saved=upstream/MetaCubeX/geoip/private.list
 - private-ip mrs: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs  sha256=65027bee3076ec49024935c0eb9e4b85a447687db384d4b8d2763b6c2566ec1f  bytes=236  saved=upstream/MetaCubeX/geoip/private.mrs
-- cn-ip list: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.list  sha256=fbd7e9d897539b00bcac7ce71848b5a3be4ce436e266102ff49b25c25a27f7a6  bytes=153635  saved=upstream/MetaCubeX/geoip/cn.list
-- cn-ip mrs: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs  sha256=81c8ab36f71f8a8f1440acdd6316730f8735e3aab26da7bde8de9faaf309463c  bytes=37429  saved=upstream/MetaCubeX/geoip/cn.mrs
+- cn-ip list: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.list  sha256=f6b39dc8dcf094cdc06c7dc1ce07270f0987093a9d1323c7cb4e33951bf0fccc  bytes=154100  saved=upstream/MetaCubeX/geoip/cn.list
+- cn-ip mrs: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs  sha256=895fd8e055ce9b26c297571c5244c2a314a1e2184122bd3b83276be75e0befb1  bytes=37527  saved=upstream/MetaCubeX/geoip/cn.mrs
